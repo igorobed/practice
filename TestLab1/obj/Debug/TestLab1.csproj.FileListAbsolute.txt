@@ -1,0 +1,7 @@
+C:\Users\jni\source\repos\TestLab1\bin\Debug\TestLab1.exe.config
+C:\Users\jni\source\repos\TestLab1\bin\Debug\TestLab1.exe
+C:\Users\jni\source\repos\TestLab1\bin\Debug\TestLab1.pdb
+C:\Users\jni\source\repos\TestLab1\obj\Debug\TestLab1.csprojAssemblyReference.cache
+C:\Users\jni\source\repos\TestLab1\obj\Debug\TestLab1.csproj.CoreCompileInputs.cache
+C:\Users\jni\source\repos\TestLab1\obj\Debug\TestLab1.exe
+C:\Users\jni\source\repos\TestLab1\obj\Debug\TestLab1.pdb
