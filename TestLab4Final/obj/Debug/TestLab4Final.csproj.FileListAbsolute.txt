@@ -1,0 +1,11 @@
+C:\Users\jni\source\repos\TestLab4Final\obj\Debug\TestLab4Final.csprojAssemblyReference.cache
+C:\Users\jni\source\repos\TestLab4Final\obj\Debug\TestLab4Final.csproj.CoreCompileInputs.cache
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab4Final.exe.config
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab4Final.exe
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab4Final.pdb
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab1.exe
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab1.pdb
+C:\Users\jni\source\repos\TestLab4Final\bin\Debug\TestLab1.exe.config
+C:\Users\jni\source\repos\TestLab4Final\obj\Debug\TestLab4Final.csproj.CopyComplete
+C:\Users\jni\source\repos\TestLab4Final\obj\Debug\TestLab4Final.exe
+C:\Users\jni\source\repos\TestLab4Final\obj\Debug\TestLab4Final.pdb
