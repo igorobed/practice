@@ -48,7 +48,8 @@ namespace TestLab5Final
                 else
                 {
                     Console.WriteLine(false);
-                    throw new RuleFalseException($"Тип валидируемого объекта: {(x.GetType()).ToString()}\nНомер проверки: {n}");
+                    throw new RuleFalseException($"Тип валидируемого объекта: {(x.GetType()).ToString()}\n" +
+                        $"Номер проверки: {n}", (x.GetType()).ToString(), n);
                 }
                 n += 1;
             }
