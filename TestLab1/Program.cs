@@ -13,7 +13,7 @@ namespace TestLab1
         {
             try
             {
-                Fraction c = new Fraction(3);
+                /*Fraction c = new Fraction(3);
                 Fraction a = new Fraction(34, 27);
                 Fraction b = new Fraction(2, 4);
                 Console.WriteLine(b);
@@ -24,7 +24,10 @@ namespace TestLab1
                 Console.WriteLine(a == a);
                 Console.WriteLine(c > b);
                 Console.WriteLine(c <= b);
-                Fraction g = new Fraction(-1, 0);
+                Fraction g = new Fraction(-1, 0);*/
+                Fraction bb = new Fraction(-9, 8);
+                string k = bb.ToString(2);
+                Console.WriteLine(k);
             }
             catch (Exception ex)
             {

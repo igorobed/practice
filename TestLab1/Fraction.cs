@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 namespace TestLab1
 {
-    class Fraction : ICloneable, IComparable, IEquatable<Fraction>, IComparable<Fraction>
+    public class Fraction : ICloneable, IComparable, IEquatable<Fraction>, IComparable<Fraction>
     {
         //numerator - числитель
         private BigInteger _numerator;
@@ -15,7 +16,7 @@ namespace TestLab1
         private BigInteger _denominator;
 
         #region constructors
-        public Fraction()
+        public Fraction()//логичнее 0  в числитель
         {
             _numerator = 1;
             _denominator = 1;
@@ -71,7 +72,8 @@ namespace TestLab1
         }
 
         //печать с заданным числом знаков после запятой
-        public string ToString(int n)
+        //сделать через итерационный процесс
+        /*public string ToString(int n)
         {
             double result = (double)this._numerator / (double)this._denominator;
             string form = "#.";
@@ -80,6 +82,51 @@ namespace TestLab1
                 form += '#';
             }
             return result.ToString(form);
+        }*/
+        public string ToString(int n)
+        {
+            if (n < 0)
+            {
+                throw new ArgumentException("Incorrect argument n in ToString(int n)");
+            }
+            Fraction fr_0 = new Fraction(0);
+            BigInteger temp;
+            Fraction fr_new;
+            string res = "";
+            if (this > fr_0)
+            {
+                temp = Numerator / Denominator;
+                res += temp.ToString();
+                fr_new = new Fraction(Numerator - temp * Denominator, Denominator);
+            }
+            else if(this < fr_0)
+            {
+                res += "-";
+                temp = (-1) * Numerator / Denominator;
+                res += temp.ToString();
+                fr_new = new Fraction((-1) * Numerator - temp * Denominator, Denominator);
+            }
+            else
+            {
+                return res + "0";
+            }
+            
+            for (int i = 0; i < n; i++)
+            {
+                if (fr_new == fr_0)
+                {
+                    break;
+                }
+                if (i == 0)
+                {
+                    res += ",";
+                }
+                temp = (fr_new.Numerator * 10) / fr_new.Denominator;
+                res += temp.ToString();
+
+                fr_new = new Fraction(fr_new.Numerator * 10 - temp * fr_new.Denominator, fr_new.Denominator);
+            }
+            return res;
         }
         #endregion
 
@@ -111,22 +158,15 @@ namespace TestLab1
             }
             if (a < 0) a = -1 * a;
             if (b < 0) b = -1 * b;
-            /*if ((a * b) < 0)
-            {
-                return (-1 * (a * b)) / NOD(a, b);
-            }
-            else
-            {
-                return (a * b) / NOD(a, b);
-            }*/
+            
             return (a * b) / NOD(a, b);
         }
 
-        private static Fraction Abs(Fraction x)
+        public static Fraction Abs(Fraction x)
         {
             if (x is null)
             {
-                throw new NullReferenceException("An empty object is passed");
+                throw new ArgumentNullException("An empty object is passed");
             }
             if (x._numerator < 0)
             {
@@ -158,7 +198,7 @@ namespace TestLab1
                 {
                     break;
                 }
-                x = (Fraction)nx.Clone();
+                x = (Fraction)nx.Clone();//метод клон здесь лишний убрать
             }
             return x;
         }
@@ -247,16 +287,17 @@ namespace TestLab1
             return Div(first, second);
         }
 
+        //убрать ограничение на степень
         public Fraction Pow(int n)
         {
             if (n == 0)
             {
                 return new Fraction(1, 1);
             }
-            if (n > 6 || n < (-6))
+            /*if (n > 6 || n < (-6))
             {
                 throw new ArgumentException("Too much degree");
-            }
+            }*/
 
             if (this._numerator == 0)
             {
@@ -294,6 +335,7 @@ namespace TestLab1
             return new Fraction(this._numerator, this._denominator);
         }
 
+        //лучше бы кидать исключения но и так моно
         public int CompareTo(object obj)
         {
             if (obj is null)
