@@ -81,6 +81,7 @@ namespace TestLab4Final
                 }
                 answ2 = (h / fr_3) * ((fr_1 / fr_2) * f(a) + sum1 + fr_2 * sum2 + (fr_1 / fr_2) * f(b));
             }
+            Console.WriteLine($"Найденный диапазон разбиений для получения заданной точности: {n - 100} - {n}");
             return answ2;
         }
     }

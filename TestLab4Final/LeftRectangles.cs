@@ -60,6 +60,7 @@ namespace TestLab4Final
                 }
                 answ2 = h * sum;
             }
+            Console.WriteLine($"Найденный диапазон разбиений для получения заданной точности: {n - 100} - {n}");
             return answ2;
         }
     }
