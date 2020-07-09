@@ -1,0 +1,7 @@
+C:\Users\jni\source\repos\TestLab5Final\bin\Debug\TestLab5Final.exe.config
+C:\Users\jni\source\repos\TestLab5Final\bin\Debug\TestLab5Final.exe
+C:\Users\jni\source\repos\TestLab5Final\bin\Debug\TestLab5Final.pdb
+C:\Users\jni\source\repos\TestLab5Final\obj\Debug\TestLab5Final.csprojAssemblyReference.cache
+C:\Users\jni\source\repos\TestLab5Final\obj\Debug\TestLab5Final.csproj.CoreCompileInputs.cache
+C:\Users\jni\source\repos\TestLab5Final\obj\Debug\TestLab5Final.exe
+C:\Users\jni\source\repos\TestLab5Final\obj\Debug\TestLab5Final.pdb
